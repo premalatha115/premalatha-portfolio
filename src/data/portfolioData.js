@@ -11,7 +11,7 @@ export const profile = {
   leetcode: "https://leetcode.com/u/Premalatha77",
   github: "", // add your GitHub profile URL here
   resumeFile: "/resume.pdf",
-  photo: "/photo.jpg",
+  photo: "/photo.png",
 };
 
 export const education = [
