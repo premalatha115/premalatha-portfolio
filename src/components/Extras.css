@@ -1,0 +1,55 @@
+.extras {
+  padding-top: 0;
+}
+
+.extras__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 16px;
+}
+
+@media (max-width: 800px) {
+  .extras__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.extras__achievement {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.extras__trophy {
+  color: var(--legacy);
+  flex-shrink: 0;
+}
+
+.extras__achievement-title {
+  font-size: 14.5px;
+  color: var(--text);
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.extras__achievement-date {
+  font-size: 12.5px;
+  color: var(--text-dim);
+}
+
+.extras__learning {
+  padding: 24px;
+}
+
+.extras__learning-label {
+  font-size: 12px;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+
+.extras__learning-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}

@@ -1,0 +1,144 @@
+.projects__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.project-card {
+  padding: 32px;
+  position: relative;
+  transition: border-color 0.2s ease;
+}
+
+.project-card:hover {
+  border-color: var(--border);
+}
+
+.project-card--featured {
+  border-color: var(--accent);
+  background: linear-gradient(180deg, var(--accent-dim), transparent 40%), var(--panel);
+}
+
+.project-card__badge {
+  position: absolute;
+  top: -1px;
+  right: 28px;
+  background: var(--accent);
+  color: #0B0F14;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 0 0 6px 6px;
+}
+
+.project-card__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.project-card__title {
+  font-size: 21px;
+  margin-bottom: 4px;
+}
+
+.project-card__type {
+  font-size: 12.5px;
+  color: var(--text-dim);
+}
+
+.project-card__links {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.project-card__links .btn {
+  padding: 8px 14px;
+  font-size: 13px;
+}
+
+.project-card__desc {
+  font-size: 15px;
+  line-height: 1.65;
+  max-width: 680px;
+  margin-bottom: 20px;
+}
+
+.project-card__stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.project-card__body {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-soft);
+}
+
+@media (max-width: 800px) {
+  .project-card__body {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-card__section-label {
+  font-size: 11.5px;
+  color: var(--text-dim);
+  margin-bottom: 14px;
+}
+
+.project-card__features ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-card__features li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+.project-card__features li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.project-card__arch-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.project-card__arch-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.project-card__arch-row span {
+  font-size: 12px;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--panel-alt);
+  color: var(--text-muted);
+}
+
+.project-card__arch-arrow {
+  color: var(--text-dim);
+}

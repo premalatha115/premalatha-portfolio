@@ -1,0 +1,161 @@
+.about__grid {
+  display: grid;
+  grid-template-columns: 200px 1.3fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+@media (max-width: 1100px) {
+  .about__grid {
+    grid-template-columns: 160px 1fr;
+  }
+  .about__stats {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+  }
+  .about__photo-wrap {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+.about__photo-wrap {
+  position: sticky;
+  top: 100px;
+}
+
+@media (max-width: 640px) {
+  .about__photo-wrap {
+    position: static;
+  }
+}
+
+.about__photo {
+  width: 100%;
+  max-width: 200px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  padding: 0;
+}
+
+@media (max-width: 640px) {
+  .about__photo {
+    max-width: 140px;
+  }
+}
+
+.about__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about__lead {
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 28px;
+  max-width: 540px;
+}
+
+.about__points {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.about__points li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 540px;
+}
+
+.about__points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 8px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.about__education {
+  border-top: 1px solid var(--border-soft);
+  padding-top: 24px;
+}
+
+.about__edu-label {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-bottom: 14px;
+}
+
+.about__edu-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.about__edu-row:last-child {
+  border-bottom: none;
+}
+
+.about__edu-degree {
+  font-size: 14.5px;
+  color: var(--text);
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.about__edu-school {
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+.about__edu-period {
+  font-size: 12.5px;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+.about__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-content: start;
+}
+
+.about__stat {
+  padding: 26px 20px;
+  transition: border-color 0.2s ease;
+}
+
+.about__stat:hover {
+  border-color: var(--accent);
+}
+
+.about__stat-value {
+  font-family: var(--font-display);
+  font-size: 26px;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.about__stat-label {
+  font-size: 13px;
+  color: var(--text-muted);
+}

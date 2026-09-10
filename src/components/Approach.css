@@ -1,0 +1,34 @@
+.approach__timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.approach__step {
+  display: flex;
+  gap: 24px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.approach__step:last-child {
+  border-bottom: none;
+}
+
+.approach__step-num {
+  font-size: 14px;
+  color: var(--accent);
+  flex-shrink: 0;
+  width: 32px;
+  padding-top: 2px;
+}
+
+.approach__step-title {
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+.approach__step-detail {
+  font-size: 14.5px;
+  max-width: 560px;
+  line-height: 1.6;
+}

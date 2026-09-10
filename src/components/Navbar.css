@@ -1,0 +1,132 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid transparent;
+  backdrop-filter: blur(0px);
+  transition: all 0.3s ease;
+}
+
+.navbar--scrolled {
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  border-bottom: 1px solid var(--border-soft);
+  backdrop-filter: blur(14px);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+
+.navbar__brand {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  padding: 0;
+}
+
+.navbar__brand-dot {
+  color: var(--accent);
+}
+
+.navbar__links {
+  display: flex;
+  gap: 4px;
+}
+
+@media (max-width: 900px) {
+  .navbar__links {
+    display: none;
+  }
+}
+
+.navbar__link {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.navbar__link:hover {
+  color: var(--text);
+}
+
+.navbar__link--active {
+  color: var(--accent);
+}
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar__resume {
+  padding: 8px 16px;
+  font-size: 13.5px;
+}
+
+@media (max-width: 640px) {
+  .navbar__resume {
+    display: none;
+  }
+}
+
+.navbar__icon-btn {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.navbar__icon-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.navbar__menu-btn {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .navbar__menu-btn {
+    display: inline-flex;
+  }
+}
+
+.navbar__mobile {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.navbar__mobile-link {
+  background: none;
+  border: none;
+  text-align: left;
+  color: var(--text-muted);
+  font-size: 15px;
+  padding: 14px 32px;
+  border-top: 1px solid var(--border-soft);
+}
+
+.navbar__mobile-resume {
+  margin: 16px 32px 20px;
+  justify-content: center;
+}
